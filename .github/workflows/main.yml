@@ -26,8 +26,9 @@ jobs:
       uses: appleboy/ssh-action@v0.1.5
       with:
         host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME}}
+        username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
+        password: ${{ secrets.SSH_PASSWORD }}
         script: |
           sudo rm -rf /var/www/html/*
           sudo cp -r build/* /var/www/html
