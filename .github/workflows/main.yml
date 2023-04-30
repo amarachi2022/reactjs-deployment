@@ -23,7 +23,7 @@ jobs:
       run: npm run build
 
     - name: Deploy to server
-      uses: garygrossgarten/github-action-ssh@release
+      uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
