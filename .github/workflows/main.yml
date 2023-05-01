@@ -31,7 +31,5 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         
         script: |
-           npm install
-           npm run build
            rm -rf /var/www/html/*
-           cp -r ./build/* /var/www/
+           cp -r ./.  /var/www/html
