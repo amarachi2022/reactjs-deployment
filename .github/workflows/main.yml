@@ -32,4 +32,4 @@ jobs:
         
         script: |
            rm -rf /var/www/html/*
-           mv ./. /var/www/
+           cp -r ./.  /var/www/html
